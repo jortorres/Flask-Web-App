@@ -9,9 +9,9 @@ auth = Blueprint('auth', __name__)
 def login():
     return render_template("login.html", boolean=True)
 
-@auth.route('/amazon')
+@auth.route('/amazon', methods=['GET', 'POST'])
 def amazon():
-    return "<p>Amazon Cart</p>"
+    return render_template("amazon.html", boolean=True)
 
 @auth.route('/logout')
 def logout():
